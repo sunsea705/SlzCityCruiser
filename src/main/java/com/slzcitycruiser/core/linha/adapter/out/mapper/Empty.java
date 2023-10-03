@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.prefixo.domain;
+package com.slzcitycruiser.core.linha.adapter.out.mapper;
 
 public class Empty {
 

@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.prefixo.adapter.out.database.repository;
+package com.slzcitycruiser.core.localidade.adapter.out.mapper;
 
 public class Empty {
 

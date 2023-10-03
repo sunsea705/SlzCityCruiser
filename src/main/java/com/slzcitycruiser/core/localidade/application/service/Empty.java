@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.tipolocalidade.adapter.out.database.repository;
+package com.slzcitycruiser.core.localidade.application.service;
 
 public class Empty {
 

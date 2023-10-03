@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.prefixo.adapter.out.database.model;
+package com.slzcitycruiser.core.linha.application.service;
 
 public class Empty {
 

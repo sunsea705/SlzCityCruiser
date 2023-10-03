@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.tipolocalidade.adapter.out.database.model;
+package com.slzcitycruiser.core.localidade.adapter.in.controller;
 
 public class Empty {
 
