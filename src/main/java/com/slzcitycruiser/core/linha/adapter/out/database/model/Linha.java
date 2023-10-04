@@ -2,9 +2,11 @@ package com.slzcitycruiser.core.linha.adapter.out.database.model;
 
 import com.slzcitycruiser.core.localidade.adapter.out.database.model.Localidade;
 import com.slzcitycruiser.core.prefixo.adapter.out.database.model.Prefixo;
+
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity @Data

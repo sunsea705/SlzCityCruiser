@@ -1,6 +1,6 @@
 package com.slzcitycruiser.core.prefixo.adapter.out.database.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.Data;
 

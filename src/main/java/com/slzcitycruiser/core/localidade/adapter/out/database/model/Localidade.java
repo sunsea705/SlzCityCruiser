@@ -4,7 +4,7 @@ import com.slzcitycruiser.core.linha.adapter.out.database.model.Linha;
 import com.slzcitycruiser.core.tipolocalidade.adapter.out.database.model.TipoLocalidade;
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Entity @Data
@@ -19,7 +19,7 @@ public class Localidade {
 
     private String descricao;
 
-    @OneToMany
+    @ManyToOne
     private TipoLocalidade tipoLocalidade;
 
     @ManyToMany

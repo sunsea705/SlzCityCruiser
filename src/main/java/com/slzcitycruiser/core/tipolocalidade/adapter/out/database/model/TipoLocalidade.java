@@ -2,7 +2,7 @@ package com.slzcitycruiser.core.tipolocalidade.adapter.out.database.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity @Data
 @Table(name = "tipo_localidade", schema = "slzcitycruiser")
