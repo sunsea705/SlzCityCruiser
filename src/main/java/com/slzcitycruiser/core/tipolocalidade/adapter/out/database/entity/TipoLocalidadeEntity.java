@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.tipolocalidade.adapter.out.database.model;
+package com.slzcitycruiser.core.tipolocalidade.adapter.out.database.entity;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 @Table(name = "tipo_localidade", schema = "slzcitycruiser")
 @SequenceGenerator(schema="slzcitycruiser", name = "seq_tipo_localidade_id",
                    sequenceName = "seq_tipo_localidade_id", allocationSize = 1)
-public class TipoLocalidade {
+public class TipoLocalidadeEntity {
 
     @Id
     @GeneratedValue(generator = "seq_tipo_localidade_id")
