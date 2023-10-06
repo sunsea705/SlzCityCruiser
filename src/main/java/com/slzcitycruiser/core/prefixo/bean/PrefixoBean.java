@@ -1,7 +1,9 @@
 package com.slzcitycruiser.core.prefixo.bean;
 
+import com.slzcitycruiser.core.prefixo.application.in.BuscarPrefixoPorIdUC;
 import com.slzcitycruiser.core.prefixo.application.in.BuscarTodosPrefixosUC;
 import com.slzcitycruiser.core.prefixo.application.out.PrefixoRepository;
+import com.slzcitycruiser.core.prefixo.application.service.BuscarPrefixoPorIdService;
 import com.slzcitycruiser.core.prefixo.application.service.BuscarTodosPrefixosService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +14,11 @@ public class PrefixoBean {
     @Bean
     public BuscarTodosPrefixosUC createBuscarTodosPrefixosUC(PrefixoRepository prefixoRepository){
         return new BuscarTodosPrefixosService(prefixoRepository);
+    }
+
+    @Bean
+    public BuscarPrefixoPorIdUC createBuscarPrefixoPorIdUC(PrefixoRepository prefixoRepository) {
+        return new BuscarPrefixoPorIdService(prefixoRepository);
     }
 
 }

@@ -25,4 +25,9 @@ public class PrefixoAdapter implements PrefixoRepository {
                .map(prefixoMapper::fromJpaToDomain)
                .toList();
     }
+
+    @Override
+    public Prefixo buscarPrefixoPorId(Long id) {
+        return null;
+    }
 }

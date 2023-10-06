@@ -7,4 +7,6 @@ import java.util.List;
 public interface PrefixoRepository {
 
     List<Prefixo> buscarTodosPrefixos();
+
+    Prefixo buscarPrefixoPorId(Long id);
 }

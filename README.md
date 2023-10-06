@@ -7,4 +7,5 @@
    - Lombok
    - Arquitetura Hexagonal
    - ModelMapper
+   - Exceções Personalizadas
  - SpringBoot
