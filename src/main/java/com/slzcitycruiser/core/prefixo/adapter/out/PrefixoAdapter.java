@@ -1,5 +1,6 @@
 package com.slzcitycruiser.core.prefixo.adapter.out;
 
+import com.slzcitycruiser.config.exceptions.EntidadeNaoEncontradaException;
 import com.slzcitycruiser.core.prefixo.adapter.out.database.repository.PrefixoJpaRepository;
 import com.slzcitycruiser.core.prefixo.adapter.out.mapper.PrefixoMapper;
 import com.slzcitycruiser.core.prefixo.application.out.PrefixoRepository;
@@ -28,6 +29,10 @@ public class PrefixoAdapter implements PrefixoRepository {
 
     @Override
     public Prefixo buscarPrefixoPorId(Long id) {
-        return null;
+        return
+            prefixoJpaRepository
+            .findById(id)
+            .map(prefixoMapper::fromJpaToDomain)
+            .orElseThrow(() -> new EntidadeNaoEncontradaException("Prefixo", "id"));
     }
 }

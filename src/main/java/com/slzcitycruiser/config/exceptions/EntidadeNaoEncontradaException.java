@@ -17,8 +17,6 @@ public class EntidadeNaoEncontradaException extends RuntimeException {
     private String descricaoErro;
 
     public EntidadeNaoEncontradaException(String nomeEntidade, List<String> campos){
-        super(nomeEntidade);
-
         StringBuilder msg = new StringBuilder();
         msg.append("ERRO: Não foram encontradas nenhuma instância da entidade '");
         msg.append(nomeEntidade);
@@ -31,6 +29,17 @@ public class EntidadeNaoEncontradaException extends RuntimeException {
             }
             msg.append(".");
         }
+
+        this.descricaoErro = msg.toString();
+    }
+
+    public EntidadeNaoEncontradaException(String nomeEntidade, String campo) {
+        StringBuilder msg = new StringBuilder();
+        msg.append("ERRO: Não foram encontradas nenhuma instância da entidade '");
+        msg.append(nomeEntidade);
+        msg.append("' com o seguinte campo de busca: ");
+        msg.append(campo);
+        msg.append(".");
 
         this.descricaoErro = msg.toString();
     }
