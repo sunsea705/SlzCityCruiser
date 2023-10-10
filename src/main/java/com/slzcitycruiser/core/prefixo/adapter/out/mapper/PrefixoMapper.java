@@ -12,6 +12,10 @@ public class PrefixoMapper {
         return createModelMapper().map(prefixoEntity, Prefixo.class);
     }
 
+    public PrefixoEntity fromDomainToJpa(Prefixo prefixo) {
+        return createModelMapper().map(prefixo, PrefixoEntity.class);
+    }
+
     private ModelMapper createModelMapper() {
         return new ModelMapper();
     }

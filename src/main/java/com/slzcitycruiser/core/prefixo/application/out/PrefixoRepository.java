@@ -9,4 +9,6 @@ public interface PrefixoRepository {
     List<Prefixo> buscarTodosPrefixos();
 
     Prefixo buscarPrefixoPorId(Long id);
+
+    Prefixo criarPrefixo(String descricao, String sigla);
 }

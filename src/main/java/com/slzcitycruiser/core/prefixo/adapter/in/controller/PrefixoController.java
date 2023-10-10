@@ -1,7 +1,9 @@
 package com.slzcitycruiser.core.prefixo.adapter.in.controller;
 
+import com.slzcitycruiser.core.prefixo.adapter.in.request.CriarPrefixoRequest;
 import com.slzcitycruiser.core.prefixo.application.in.BuscarPrefixoPorIdUC;
 import com.slzcitycruiser.core.prefixo.application.in.BuscarTodosPrefixosUC;
+import com.slzcitycruiser.core.prefixo.application.in.CriarPrefixoUC;
 import com.slzcitycruiser.core.prefixo.domain.Prefixo;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +19,7 @@ public class PrefixoController {
 
     private final BuscarTodosPrefixosUC buscarTodosPrefixosUC;
     private final BuscarPrefixoPorIdUC buscarPrefixoPorIdUC;
+    private final CriarPrefixoUC criarPrefixoUC;
 
     @GetMapping
     public ResponseEntity<List<Prefixo>> buscarTodosPrefixos() {
@@ -26,5 +29,10 @@ public class PrefixoController {
     @GetMapping("/buscar-por-id/{id}")
     public ResponseEntity<Prefixo> buscarPrefixoPorId(@Valid @PathVariable Long id) {
         return ResponseEntity.ok(buscarPrefixoPorIdUC.execute(id));
+    }
+
+    @PostMapping("/criar")
+    public ResponseEntity<Prefixo> criarPrefixo(@Valid @RequestBody CriarPrefixoRequest criarPrefixoRequest) {
+        return ResponseEntity.ok(criarPrefixoUC.execute(criarPrefixoRequest.getDescricao(), criarPrefixoRequest.getSigla()));
     }
 }

@@ -11,4 +11,9 @@ public class Prefixo {
     private String descricao;
     private String sigla;
 
+    public Prefixo(String descricao, String sigla){
+        this.descricao = descricao;
+        this.sigla = sigla;
+    }
+
 }

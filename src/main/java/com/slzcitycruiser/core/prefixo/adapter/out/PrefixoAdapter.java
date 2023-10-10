@@ -35,4 +35,14 @@ public class PrefixoAdapter implements PrefixoRepository {
             .map(prefixoMapper::fromJpaToDomain)
             .orElseThrow(() -> new EntidadeNaoEncontradaException("Prefixo", "id"));
     }
+
+    @Override
+    public Prefixo criarPrefixo(String descricao, String sigla) {
+        return
+            prefixoMapper.fromJpaToDomain(
+                prefixoJpaRepository.save(
+                    prefixoMapper.fromDomainToJpa(new Prefixo(descricao, sigla))
+                )
+            );
+    }
 }
