@@ -5,7 +5,9 @@ import com.slzcitycruiser.core.tipolocalidade.adapter.out.mapper.TipoLocalidadeM
 import com.slzcitycruiser.core.tipolocalidade.application.out.TipoLocalidadeRepository;
 import com.slzcitycruiser.core.tipolocalidade.domain.TipoLocalidade;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
 @RequiredArgsConstructor
 public class TipoLocalidadeAdapter implements TipoLocalidadeRepository {
 
