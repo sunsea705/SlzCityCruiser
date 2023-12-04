@@ -1,4 +1,4 @@
-package com.slzcitycruiser.core.prefixo.adapter.in.request;
+package com.slzcitycruiser.core.tipolocalidade.adapter.in.request;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CriarPrefixoRequest {
+public class CriarTipoLocalidadeRequest {
 
     @NotNull @NotEmpty private String descricao;
-    @NotNull @NotEmpty private String sigla;
 
 }

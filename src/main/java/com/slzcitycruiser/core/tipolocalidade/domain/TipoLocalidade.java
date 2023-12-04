@@ -10,4 +10,7 @@ public class TipoLocalidade {
     private Long id;
     private String descricao;
 
+    public TipoLocalidade(String descricao) {
+        this.descricao = descricao;
+    }
 }

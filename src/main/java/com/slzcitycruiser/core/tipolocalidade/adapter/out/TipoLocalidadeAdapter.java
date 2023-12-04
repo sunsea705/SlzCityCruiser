@@ -13,8 +13,16 @@ public class TipoLocalidadeAdapter implements TipoLocalidadeRepository {
 
     private final TipoLocalidadeJpaRepository tipoLocalidadeJpaRepository;
     private final TipoLocalidadeMapper tipoLocalidadeMapper;
+
     @Override
     public TipoLocalidade criarTipoLocalidade(String descricao) {
-        return null;
+
+        return
+            tipoLocalidadeMapper.fromJpaToDomain(
+                tipoLocalidadeJpaRepository.save(
+                    tipoLocalidadeMapper.fromDomainToJpa(new TipoLocalidade(descricao))
+                )
+            );
+
     }
 }
