@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity @Data
-@Table(name = "prefixo", schema = "slzcitycruiser")
-@SequenceGenerator(schema="slzcitycruiser", name = "seq_prefixo_id",
+@Table(name = "prefixo", schema = "sql10667485")
+@SequenceGenerator(schema="sql10667485", name = "seq_prefixo_id",
                    sequenceName = "seq_prefixo_id", allocationSize = 1)
 public class PrefixoEntity {
 

@@ -8,8 +8,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity @Data
-@Table(name = "localidade", schema = "slzcitycruiser")
-@SequenceGenerator(schema="slzcitycruiser", name = "seq_localidade_id",
+@Table(name = "localidade", schema = "sql10667485")
+@SequenceGenerator(schema="sql10667485", name = "seq_localidade_id",
                    sequenceName = "seq_localidade_id", allocationSize = 1)
 public class LocalidadeEntity {
 

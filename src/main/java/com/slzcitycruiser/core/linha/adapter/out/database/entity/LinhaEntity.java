@@ -10,8 +10,8 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name = "linha", schema = "slzcitycruiser")
-@SequenceGenerator(schema="slzcitycruiser", name = "seq_linha_id",
+@Table(name = "linha", schema = "sql10667485")
+@SequenceGenerator(schema="sql10667485", name = "seq_linha_id",
                    sequenceName = "seq_linha_id", allocationSize = 1)
 public class LinhaEntity {
 
