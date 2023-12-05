@@ -9,3 +9,5 @@
    - ModelMapper
    - Exceções Personalizadas
  - SpringBoot
+ - Documentação com Swagger
+ - JUnit 5 e Mockito

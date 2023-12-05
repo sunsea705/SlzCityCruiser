@@ -5,6 +5,7 @@ import com.slzcitycruiser.core.prefixo.application.in.BuscarPrefixoPorIdUC;
 import com.slzcitycruiser.core.prefixo.application.in.BuscarTodosPrefixosUC;
 import com.slzcitycruiser.core.prefixo.application.in.CriarPrefixoUC;
 import com.slzcitycruiser.core.prefixo.domain.Prefixo;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,8 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("prefixo")
+@Tag(name = "Prefixo")
+@RequestMapping("/prefixo")
 public class PrefixoController {
 
     private final BuscarTodosPrefixosUC buscarTodosPrefixosUC;

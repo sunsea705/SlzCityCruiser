@@ -4,6 +4,7 @@ import com.slzcitycruiser.core.tipolocalidade.adapter.in.request.CriarTipoLocali
 import com.slzcitycruiser.core.tipolocalidade.application.in.BuscarTodosTiposLocalidadeUC;
 import com.slzcitycruiser.core.tipolocalidade.application.in.CriarTipoLocalidadeUC;
 import com.slzcitycruiser.core.tipolocalidade.domain.TipoLocalidade;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
-@RequestMapping("/tipolocalidade")
 @RequiredArgsConstructor
+@Tag(name = "Tipo Localidade")
+@RequestMapping("/tipolocalidade")
 public class TipoLocalidadeController {
 
     private final CriarTipoLocalidadeUC criarTipoLocalidadeUC;
