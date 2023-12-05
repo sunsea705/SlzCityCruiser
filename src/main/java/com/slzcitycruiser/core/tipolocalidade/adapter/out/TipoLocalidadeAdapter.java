@@ -7,6 +7,8 @@ import com.slzcitycruiser.core.tipolocalidade.domain.TipoLocalidade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class TipoLocalidadeAdapter implements TipoLocalidadeRepository {
@@ -23,6 +25,17 @@ public class TipoLocalidadeAdapter implements TipoLocalidadeRepository {
                     tipoLocalidadeMapper.fromDomainToJpa(new TipoLocalidade(descricao))
                 )
             );
+
+    }
+
+    @Override
+    public List<TipoLocalidade> buscarTodosTiposLocalidade() {
+
+        return tipoLocalidadeJpaRepository
+                .findAll()
+                .stream()
+                .map(tipoLocalidadeMapper::fromJpaToDomain)
+                .toList();
 
     }
 }

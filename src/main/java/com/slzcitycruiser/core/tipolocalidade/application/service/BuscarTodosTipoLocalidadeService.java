@@ -1,19 +1,21 @@
 package com.slzcitycruiser.core.tipolocalidade.application.service;
 
-import com.slzcitycruiser.core.tipolocalidade.application.in.CriarTipoLocalidadeUC;
+import com.slzcitycruiser.core.tipolocalidade.application.in.BuscarTodosTiposLocalidadeUC;
 import com.slzcitycruiser.core.tipolocalidade.application.out.TipoLocalidadeRepository;
 import com.slzcitycruiser.core.tipolocalidade.domain.TipoLocalidade;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
-public class CriarTipoLocalidadeService implements CriarTipoLocalidadeUC {
+public class BuscarTodosTipoLocalidadeService implements BuscarTodosTiposLocalidadeUC {
 
     private TipoLocalidadeRepository tipoLocalidadeRepository;
 
     @Override
-    public TipoLocalidade execute(String descricao) {
-        return tipoLocalidadeRepository.criarTipoLocalidade(descricao);
+    public List<TipoLocalidade> execute() {
+        return tipoLocalidadeRepository.buscarTodosTiposLocalidade();
     }
 }
