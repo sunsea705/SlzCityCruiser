@@ -34,7 +34,7 @@ public class PrefixoController {
     }
 
     @PostMapping("/criar")
-    public ResponseEntity<Prefixo> criarPrefixo(@Valid @RequestBody CriarPrefixoRequest criarPrefixoRequest) {
+    public ResponseEntity<Prefixo> criarPrefixo(@RequestBody CriarPrefixoRequest criarPrefixoRequest) {
         return ResponseEntity.ok(criarPrefixoUC.execute(criarPrefixoRequest.getDescricao(), criarPrefixoRequest.getSigla()));
     }
 }
